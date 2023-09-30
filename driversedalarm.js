@@ -15,8 +15,20 @@ function alarm()
     }, 1000);
 }
 
+function signinpage() {
+  const heading = document.querySelector('h1.headings__h1[data-test="pageTitle"]');
+  
+  if (heading.innerHTML == "Sign In") {
+    return true;
+  }
+    return false;
+}
+
 function checkContent() 
 {
+    if (signinpage()) {
+      alarm();
+    }
     const statusElement = document.getElementById('arrow-next').firstChild.firstChild;
     const content = statusElement.textContent.trim();
     console.log(content)
