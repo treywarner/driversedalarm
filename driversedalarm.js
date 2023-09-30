@@ -18,7 +18,7 @@ function alarm()
 function signinpage() {
   const heading = document.querySelector('h1.headings__h1[data-test="pageTitle"]');
   
-  if (heading.innerHTML == "Sign In") {
+  if (heading) {
     return true;
   }
     return false;
